@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - OPENAI_TOKEN=${OPENAI_TOKEN}
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:80"
+    depends_on:
+      - backend

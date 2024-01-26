@@ -19,7 +19,7 @@ AVAILABLE_LANGS = {
 
 app = Flask(__name__)
 
-@app.route("/api/v1/reply", methods=["POST"])
+@app.route("/api/v1/audio", methods=["POST"])
 def reply():
     # pegar mensagens anteriores
     messages = request.form['messages']
