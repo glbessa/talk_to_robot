@@ -1,2 +1,5 @@
 flask
 requests
+gtts
+werkzeug
+gunicorn
